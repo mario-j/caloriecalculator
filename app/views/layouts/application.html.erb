@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calorie Calculator</title>
+    <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag "basic_navigation" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+
+  
+</html>

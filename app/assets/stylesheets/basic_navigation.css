@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.example {
+	padding-left: 10px;
+	border: 1px solid #242626;
+	font-size: 110%;
+	font-family:  Courier, VT323, "serif";
+}
+
+#navbar {
+	background-color:black;
+	color: white;
+	height:30px;
+	border: 1px solid black;
+	margin: 0;
+	padding: 0;
+}
+
+#navbar ul {
+	padding: 0;
+	margin: 0;
+}
+	
+#navbar li {
+	list-style: none; 
+	font-size: large;
+	font-family: 'Merriweather', Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	float: left; 
+	margin: 0; 
+	width: 10%; 
+
+    }
+
+#navbar a {
+	display: block; 
+	text-align:center;
+    text-decoration: none;
+	font-weight: bold; 
+	border: 1px solid; 
+	border-color: #FFF #333 #333 #FFF;
+	color: white;
+
+}
+
+#navbar a:hover {
+	background-color: #3e4142; 
+	color: #FDFDFD; 
+	border-color: #000 #CCC #CCC #000;
+}	
+     
+
+
+

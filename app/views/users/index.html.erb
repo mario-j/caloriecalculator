@@ -1,0 +1,42 @@
+<h1>Users</h1>
+    <nav>
+  		<div id="navbar">
+   			<ul>
+      		<li><a href="/home">Home</a></li>
+      		<li><a href="/users/new">Calculate Calories</a></li>
+      		<li><a href="/users">Users</a></li>
+    		</ul>
+  		</div>
+		</nav>
+		
+<table>
+  <thead>
+    <tr>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Lifestyle</th>
+      <th>Recommended Daily Calorie Intake</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.age %></td>
+        <td><%= user.height %></td>
+        <td><%= user.weight %></td>
+        <td><%= user.lifestyle %></td>
+        <td><%= mifflin_stjeor(user) %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
