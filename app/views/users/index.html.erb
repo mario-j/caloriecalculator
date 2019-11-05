@@ -12,6 +12,8 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
+      <th>Sex</th>
       <th>Age</th>
       <th>Height</th>
       <th>Weight</th>
@@ -24,6 +26,8 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
+        <td><%= user.sex %></td>
         <td><%= user.age %></td>
         <td><%= user.height %></td>
         <td><%= user.weight %></td>

@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @user.height %>
-</p>
-
-<p>
-  <strong>Weight:</strong>
-  <%= @user.weight %>
-</p>
-
-<p>
-  <strong>Lifestyle:</strong>
-  <%= @user.lifestyle %>
-</p>
+<h1>Results</h1>
+<nav>
+	<div id="navbar">
+		<ul>
+   		<li><a href="/home">Home</a></li>
+   		<li><a href="/users/new">Calculate Calories</a></li>
+   		<li><a href="/users">Users</a></li>
+ 		</ul>
+	</div>
+</nav>
+	
+<div class="container">
+	Recommended number of calories to consume per day: <%= mifflin_stjeor(@user) %>
+	
+	<br >
+	
+	Example Breakfast:
+	
+	<br >
+	
+	Example Lunch:
+	
+	<br >
+	
+	Example Dinner: 
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

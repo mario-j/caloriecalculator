@@ -1,7 +1,6 @@
 class User < ApplicationRecord
 
-
-	LIFESTYLE = ["Sedentary", "Lightly Active", "Moderately Active", "Very Active", "Extra Active"]
+	attribute :sex, :string
 	attribute :age, :integer
 	attribute :height, :decimal
 	attribute :weight, :decimal

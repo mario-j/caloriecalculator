@@ -2,21 +2,17 @@ class UsersController < ApplicationController
 
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  helper_method :show, :test, :mifflin_stjeor
+  helper_method :mifflin_stjeor
 
   def mifflin_stjeor(user)
-   	bmr = user.weight * 10 + user.height * 6.25 - user.age * 5 + 5
+  	if (user.sex.eql?("Male"))
+   		bmr = user.weight * 10 + user.height * 6.25 - user.age * 5 + 5
+  	else
+  		bmr = user.weight * 10 + user.height * 6.25 - user.age * 5 - 161 
+  	end
   end
     
-  def show
-   	user = User.last
-   	mifflin_stjeor(user)
-  end
-  
-  def test
-  	number = 3
-  end
-  
+
 
   # GET /users
   # GET /users.json
@@ -86,7 +82,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:age, :height, :weight, :lifestyle)
+      params.require(:user).permit(:sex, :age, :height, :weight, :lifestyle)
     end
     
 end
