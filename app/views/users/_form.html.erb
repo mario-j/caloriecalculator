@@ -2,8 +2,10 @@
 
 
 	<div class="form-group">
- 	 	<%= form.label :sex %>  	
- 	 	<%= form.select :sex, [ 'Male', 'Female' ], {prompt: 'Select One'}, { class: "form-control", id: "sex" } %>
+ 	 	<%= form.label :sex do %>  	
+ 	 		Sex
+ 	 		<%= form.select :sex, [ 'Male', 'Female' ], {prompt: 'Select One'}, { class: "form-control", id: "sex" } %>
+ 	 	<% end %>
   </div>
 
   <div class="form-group">
@@ -21,8 +23,10 @@
   	<%= form.number_field :weight, class: "form-control", id: "user_weight", placeholder: "Enter weight" %>
   </div>
   <div class="form-group">
-  	<%= form.label :lifestyle %>
-  	<%= form.select :lifestyle, [ 'Sedentary','Lightly Active','Moderately Active', 'Very Active', 'Extra Active' ], {prompt: 'Select One'}, { class: "form-control", id: "sex"} %>
+  	<%= form.label :lifestyle do %>
+  		Lifestyle
+  		<%= form.select :lifestyle, [ 'Sedentary','Lightly Active','Moderately Active', 'Very Active', 'Extra Active' ], {prompt: 'Select One'}, { class: "form-control", id: "sex"} %>
+  	<% end %>
   </div>
 
   <div class="form-group text-center actions">
