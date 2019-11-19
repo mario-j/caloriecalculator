@@ -1,28 +1,59 @@
 <h1>Results</h1>
-<nav>
-	<div id="navbar">
-		<ul>
-   		<li><a href="/home">Home</a></li>
-   		<li><a href="/users/new">Calculate Calories</a></li>
-   		<li><a href="/users">Users</a></li>
- 		</ul>
-	</div>
-</nav>
+<%= render "navbar" %>
 	
 <div class="container">
 	Recommended number of calories to consume per day: <%= mifflin_stjeor(@user) %>
 	
-	<br >
+	<table class="text-center">
+  <thead>
+    <tr>
+    	<th></th>
+      <th>Food</th>
+      <th>Serving Size</th>
+      <th>Calories</th>
+    </tr>
+  </thead>
+  
+	<tbody>
+		<tr>
+			<th>Breakfast</th>
+    	<% Food.where("food_type = 'breakfast'").find_each do |food| %>
+    		<tr>
+    			<td></td>
+   	    	<td><%= food.name %></td>
+   	    	<td><%= food.serving_size %></td>
+   	    	<td><%= food.calories %></td>
+   	    </tr>
+    	<% end %>
+  	</tr>
+    
+
+		<tr>
+			<th>Lunch</th>
+    	<% Food.where("food_type = 'lunch&dinner'").find_each do |food| %>
+    		<tr>
+    			<td></td>
+   	    	<td><%= food.name %></td>
+   	    	<td><%= food.serving_size %></td>
+   	    	<td><%= food.calories %></td>
+   	    </tr>
+    	<% end %>
+  	</tr>
+    
+		<tr>
+			<th>Dinner</th>
+    	<% Food.where("food_type = 'lunch&dinner'").find_each do |food| %>
+    		<tr>
+    			<td></td>
+   	    	<td><%= food.name %></td>
+   	    	<td><%= food.serving_size %></td>
+   	    	<td><%= food.calories %></td>
+   	    </tr>
+    	<% end %>
+  	</tr>
+  </tbody>
+</table>
 	
-	Example Breakfast:
-	
-	<br >
-	
-	Example Lunch:
-	
-	<br >
-	
-	Example Dinner: 
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user),{ :class=>"btn btn-primary" } %> |
+<%= link_to 'Edit', edit_user_path(@user),{ :class=>"btn btn-primary" } %>

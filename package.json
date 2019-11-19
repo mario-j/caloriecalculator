@@ -1,5 +1,7 @@
 {
   "name": "testapp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "unirest": "^0.6.0"
+  }
 }

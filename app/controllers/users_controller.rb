@@ -4,6 +4,9 @@ class UsersController < ApplicationController
 
   helper_method :mifflin_stjeor
 
+	Percentage_calories_from_breakfast = 0.25
+	Percentage_calories_from_lunch = 0.35
+	Percentage_calories_from_dinner = 0.40
   def mifflin_stjeor(user)
   	if (user.sex.eql?("Male"))
    		bmr = user.weight * 10 + user.height * 6.25 - user.age * 5 + 5
@@ -11,7 +14,12 @@ class UsersController < ApplicationController
   		bmr = user.weight * 10 + user.height * 6.25 - user.age * 5 - 161 
   	end
   end
-    
+  
+  def breakfast_sample_diet(user)
+  	total_calories = mifflin_stjeor(user)
+  	breakfast_calories = total_calories * Percentage_calories_from_breakfast
+  	
+  end   
 
 
   # GET /users
