@@ -1,18 +1,18 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.example {
-	padding-left: 10px;
-	border: 1px solid #242626;
-	font-size: 110%;
-	font-family:  Courier, VT323, "serif";
+.icon-container {
+		display: inline;
+    width:65px; 
+    height: auto;
 }
+
+p { display: inline; }
 
 #navbar {
 	background-color:black;
 	color: white;
-	height:30px;
-	border: 1px solid black;
+	height:65px;
 	margin: 0;
 	padding: 0;
 }
@@ -24,23 +24,26 @@
 	
 #navbar li {
 	list-style: none; 
-	font-size: large;
+	font-size: larger;
 	font-family: 'Merriweather', Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 	float: left; 
 	margin: 0; 
 	width: 10%; 
+}
 
-    }
+#navbar span {
+  height: 65px;
+  line-height: 65px;
+}
 
 #navbar a {
 	display: block; 
 	text-align:center;
-    text-decoration: none;
+  text-decoration: none;
 	font-weight: bold; 
-	border: 1px solid; 
-	border-color: #FFF #333 #333 #FFF;
 	color: white;
-
+	height: 65px;
+	
 }
 
 #navbar a:hover {
