@@ -1,9 +1,17 @@
 <%= render "navbar" %>
 	
 <div class="container">
-	Recommended number of calories to consume per day: <%= mifflin_stjeor(@user) %>
+
+	<div class="text-center">
+		<h1>Recommended daily calorie intake: <%= mifflin_stjeor(@user) %> calories/day</h1> 
+	</div>
 	
-	<table class="text-center">
+	<br /> <br />
+	
+	<div class="text-center">
+		<h1>Sample Diet Plan</h1>
+	</div>
+	<table class="text-center" align="center">
   <thead>
     <tr>
     	<th></th>
@@ -14,44 +22,37 @@
   </thead>
   
 	<tbody>
-		<tr>
 			<th>Breakfast</th>
-    	<% Food.where("food_type = 'breakfast'").find_each do |food| %>
     		<tr>
-    			<td></td>
-   	    	<td><%= food.name %></td>
-   	    	<td><%= food.serving_size %></td>
-   	    	<td><%= food.calories %></td>
-   	    </tr>
-    	<% end %>
-  	</tr>
-    
-
-		<tr>
+    			<td><%= breakfast_sample_diet(@user) %></td>
+   	    	<td><%= simple_format get_breakfast_diet_names() %></td>
+   	    	<td><%= simple_format get_breakfast_diet_serving_sizes() %></td>
+   	    	<td><%= simple_format get_breakfast_diet_calories() %> </td>
+   	    </tr> 
 			<th>Lunch</th>
-    	<% Food.where("food_type = 'lunch&dinner'").find_each do |food| %>
     		<tr>
     			<td></td>
-   	    	<td><%= food.name %></td>
-   	    	<td><%= food.serving_size %></td>
-   	    	<td><%= food.calories %></td>
+   	    	<td><%= simple_format get_lunch_diet_names() %></td>
+   	    	<td><%= simple_format get_lunch_diet_serving_sizes() %></td>
+   	    	<td><%= simple_format get_lunch_diet_calories() %> </td>
    	    </tr>
-    	<% end %>
-  	</tr>
-    
-		<tr>
 			<th>Dinner</th>
-    	<% Food.where("food_type = 'lunch&dinner'").find_each do |food| %>
     		<tr>
     			<td></td>
-   	    	<td><%= food.name %></td>
-   	    	<td><%= food.serving_size %></td>
-   	    	<td><%= food.calories %></td>
+   	    	<td><%= simple_format get_dinner_diet_names() %></td>
+   	    	<td><%= simple_format get_dinner_diet_serving_sizes() %></td>
+   	    	<td><%= simple_format get_dinner_diet_calories() %> </td>
    	    </tr>
-    	<% end %>
-  	</tr>
+    		<tr>
+    			<td></td>
+   	    	<td></td>
+   	    	<td></td>
+   	    	<td><%= get_calorie_sum() %></td>
+   	    </tr>
   </tbody>
 </table>
+
+<button class="btn btn-primary" onClick="window.location.reload();"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
 	
 </div>
 

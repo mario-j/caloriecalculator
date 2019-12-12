@@ -7,6 +7,10 @@
     height: auto;
 }
 
+.navbar-padding {
+	width: 10%;
+}
+
 p { display: inline; }
 
 #navbar {
@@ -28,7 +32,6 @@ p { display: inline; }
 	font-family: 'Merriweather', Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 	float: left; 
 	margin: 0; 
-	width: 10%; 
 }
 
 #navbar span {
