@@ -1,6 +1,8 @@
 <%= form_with(model: user, local: true, class: "container") do |form| %>
-
-
+	<h1 class="text-center">Enter Your Information</h1>
+	<ul>
+		<li>This information is used by the St. Jeor BMR function to calculate the recommended number of daily calorie intake.</li>
+	</ul>
 	<div class="form-group">
  	 	<label for="sex">Sex</label>
  	  <%= form.select :sex, [ 'Male', 'Female' ], {prompt: 'Select One'}, { class: "form-control", id: "sex" } %>
