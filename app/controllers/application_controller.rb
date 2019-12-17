@@ -5,4 +5,7 @@ class ApplicationController < ActionController::Base
     render "/index.html.erb"
   end
   
+  def about
+  	render "/application/about.html.erb"
+  end
 end
