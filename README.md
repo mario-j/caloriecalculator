@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A calorie calculator to calculate recommended daily calorie intake and generate sample diet plans based on that number. These diet plans consist of McDonald's menu items offering a middle ground of staying within your daily amount of recommended calories as well as providing tasty foods to eat.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Live version found here: https://limitless-shore-62756.herokuapp.com/
